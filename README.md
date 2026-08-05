@@ -87,6 +87,8 @@ Create dashboards to provide visibility into SSH activity.
 index=ssh_logs event_type="Failed SSH Login"
 | stats count by id.orig_h
 ```
+<img width="1075" height="517" alt="image" src="https://github.com/user-attachments/assets/5480fa3a-e87b-44a0-9551-5bbfb33a5eca" />
+<img width="1084" height="533" alt="image" src="https://github.com/user-attachments/assets/e0058787-9624-4d40-8b7e-843b40ce67d0" />
 
 ### Brute Force Detection
 
@@ -94,6 +96,7 @@ index=ssh_logs event_type="Failed SSH Login"
 index=ssh_logs event_type="Multiple Failed Authentication Attempts"
 | stats count by id.orig_h, id.resp_h
 ```
+<img width="1058" height="502" alt="image" src="https://github.com/user-attachments/assets/21fab398-b3c2-4cf0-bfce-f5697288c5fd" />
 
 ### Successful Logins
 
@@ -101,6 +104,7 @@ index=ssh_logs event_type="Multiple Failed Authentication Attempts"
 index=ssh_logs event_type="Successful SSH Login"
 | stats count by id.orig_h, id.resp_h
 ```
+<img width="1048" height="474" alt="image" src="https://github.com/user-attachments/assets/18edf598-183e-425a-879f-569f26937758" />
 
 ### Connections Without Authentication
 
@@ -108,6 +112,7 @@ index=ssh_logs event_type="Successful SSH Login"
 index=ssh_logs event_type="Connection Without Authentication"
 | stats count by id.orig_h
 ```
+<img width="1079" height="504" alt="image" src="https://github.com/user-attachments/assets/d6b48c2d-a079-4fb1-bfde-a0c1b4ee20a9" />
 
 ### Authentication Activity Timeline
 
@@ -115,6 +120,7 @@ index=ssh_logs event_type="Connection Without Authentication"
 index=ssh_logs
 | timechart count by event_type
 ```
+<img width="1053" height="527" alt="image" src="https://github.com/user-attachments/assets/f8f7ee98-0992-49e3-a021-a7046a90dac6" />
 
 ---
 
